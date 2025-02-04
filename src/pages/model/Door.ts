@@ -1,8 +1,8 @@
-export default class Door {
-    #number
-    #haveGift
-    #selected
-    #opened
+export default class DoorModel {
+    #number: number
+    #haveGift: boolean
+    #selected: boolean
+    #opened: boolean
 
     constructor(number: number, haveGift = false, seleted = false, opened = false){
         this.#number = number
@@ -29,16 +29,16 @@ export default class Door {
 
     open() {
         const opened = true
-        return new Door(this.number, this.#haveGift, this.selected, opened)
+        return new DoorModel(this.number, this.#haveGift, this.selected, opened)
     }
 
     deselect() {
         const selected = false
-        return new Door(this.number, this.#haveGift, selected, this.opened)
+        return new DoorModel(this.number, this.#haveGift, selected, this.opened)
     }
 
     togglSelection() {
         const selected = !this.selected
-        return new Door(this.number, this.#haveGift, selected, this.opened)
+        return new DoorModel(this.number, this.#haveGift, selected, this.opened)
     }
 }
