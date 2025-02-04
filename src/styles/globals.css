@@ -1,6 +1,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --door-area-height: 310px;
+  --door-area-width: 200px;
+
 }
 
 @media (prefers-color-scheme: dark) {
